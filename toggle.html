@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // show/hide
+        function show_hide() {
+            $("#hide").toggle();
+        }
+
+        // slide
+        $(document).ready(function () {
+            $(".slide-up").click(function () {
+                $(".box").slideUp();
+            });
+            $(".slide-down").click(function () {
+                $(".box").slideDown();
+            });
+            $(".slide-toggle").click(function () {
+                $(".box").slideToggle();
+            });
+        });
+
+        // Fade
+        $(document).ready(function () {
+            $(".button1").click(function () {
+                $("#div").fadeIn();
+            });
+        });
+        $(document).ready(function () {
+            $(".button2").click(function () {
+                $("#div").fadeOut();
+            });
+        });
+        $(document).ready(function () {
+            $(".button3").click(function () {
+                $("#div").fadeToggle();
+            });
+        });
+
+        // Animate
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                $("#hd").animate({ height: "100px", width: "200px", marginLeft: "300px" }, "slow");
+            });
+        });
+        $(document).ready(function () {
+            $(".btn2").click(function () {
+                $("#hd").animate({ height: "400px", width: "200px", marginLeft: "0" }, "slow");
+            });
+        });
+        $(document).ready(function () {
+            $(".btn3").click(function () {
+                $("#hd").animate({ height: "toggle", width: "200px", marginLeft: "toggle" }, "slow");
+            });
+        });
+
+
+
+    </script>
+</head>
+
+<body>
+    <div id="hide">
+        Click on Show/Hide button
+    </div>
+    <input type="button" value="show/Hide" onclick="show_hide();">
+
+    <hr>
+
+    <button type="button" class="slide-up">Slide Up</button>
+    <button type="button" class="slide-down">Slide Down</button>
+    <button type="button" class="slide-toggle">Slide Toggle</button>
+    <div class="box">
+        <div class="box-inner">Slider, Lorem, ipsum dolor.</div>
+    </div>
+
+    <hr>
+
+    <button class="button1">Fade in</button>
+    <button class="button2">Fade out</button>
+    <button class="button3">Fade toggle</button>
+
+    <div id="div" style="width:60px;height:60px;display:none;background-color:red;margin: 4px;"></div>
+
+    <hr>
+
+    <div id="hd" style="border: 2px solid red; padding: 20px;">
+        <h1>Chitkara</h1>
+    </div>
+
+    <button type="button" class="btn1">Slide right</button>
+    <button type="button" class="btn2">Size left</button>
+    <button type="button" class="btn3">Size t</button>
+
+
+
+
+</body>
+
+</html>
